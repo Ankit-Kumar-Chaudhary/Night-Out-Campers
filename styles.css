@@ -1,0 +1,778 @@
+/* Variables for Light and Dark Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #28473A;
+    --secondary-color: #ff5733;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1c1c1c;
+    --text-color: #ffffff;
+    --primary-color: #28473A;
+    --secondary-color: #ff5733;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo img {
+    height: 50px;
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid var(--primary-color); /* Optional border for better visibility */
+    
+}
+
+nav .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav .menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+nav .theme-toggle {
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('Background.png') no-repeat center/cover;
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.booking-btn {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Background inherit from header */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Ensures text is above the blurred image */
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1; /* Ensure text stays above the blurred image */
+}
+
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --highlight-color: #007bff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --accent-color: #ff5722;
+    --border-radius: 12px;
+    --btn-bg: #4CAF50;
+    --cta-bg: #ff9800;
+}
+
+/* Main Section */
+.about-section {
+    background-color: var(--bg-color);
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 30px var(--shadow-color);
+    margin: 40px 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Header Styling */
+.about-header h2 {
+    font-size: 3rem;
+    color: var(--highlight-color);
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.about-header p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* About Content Layout */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Image Styling - Now on the Left */
+.about-image {
+    flex: 1;
+    max-width: 450px;
+    margin-right: 30px;
+    animation: fadeInLeft 1.5s ease-out;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    transition: transform 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.08);
+}
+
+/* Text Styling (Now on Right) */
+.about-text {
+    flex: 2;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: var(--highlight-color);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.about-text p, .about-text ul {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Section Styling */
+.about-location, .about-highlights, .about-pricing, .about-dates, .about-contact {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.about-location:hover, .about-highlights:hover, .about-pricing:hover, .about-dates:hover, .about-contact:hover {
+    transform: translateY(-10px);
+}
+
+.about-location h3, .about-highlights h3, .about-pricing h3, .about-dates h3, .about-contact h3 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+}
+
+.about-location p, .about-highlights p, .about-pricing p, .about-dates p, .about-contact p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.about-contact ul li a {
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+.about-contact ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        max-width: 80%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-header p {
+        font-size: 1.2rem;
+    }
+
+    .about-text {
+        text-align: center;
+        max-width: 800px;
+    }
+
+    .about-location, .about-highlights, .about-pricing, .about-dates, .about-contact {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* For smaller devices (Phones) */
+@media (max-width: 768px) {
+    .about-header h2 {
+        font-size: 2rem;
+    }
+
+    .about-header p {
+        font-size: 1.1rem;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about-image {
+        max-width: 90%;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-location, .about-highlights, .about-pricing, .about-dates, .about-contact {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
+
+/* Galleries Section
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+} */
+
+
+/* Gallery Section */
+.gallery-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Heading */
+.gallery-section h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+/* Gallery Container */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gallery Slider Container */
+.gallery-slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+/* Gallery Images */
+.gallery-images {
+    display: flex;
+    gap: 15px;
+    animation: scroll-left 15s linear infinite;
+}
+
+/* Individual Image Styling */
+.gallery-images .gallery-img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+/* Hover Effect on Images */
+.gallery-images .gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Scrolling Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Lightbox Styling */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: #ff3d3d;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gallery-images .gallery-img {
+        max-width: 100%;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-images .gallery-img {
+        max-width: 100%;
+        height: 120px;
+    }
+
+    .gallery-section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, 
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.contact input:focus, 
+.contact textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact button {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background: var(--secondary-color);
+}
+
+.footer {
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.2px;
+}
+
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .contact {
+        padding: 15px;
+    }
+
+    .contact input, 
+    .contact textarea {
+        font-size: 0.9em;
+    }
+
+    .contact button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav .menu.active {
+        display: flex;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact input, .contact textarea {
+        font-size: 0.9em;
+    }
+}
+
+
+
+/* WhatsApp Popup Button */
+.whatsapp-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: popInOut 4s ease-in-out infinite; /* Pop-in and pop-out animation */
+}
+
+.whatsapp-popup #whatsapp-btn img {
+    width: 50px; /* Smaller size */
+    height: 50px; /* Smaller size */
+    border-radius: 50%;
+    background-color: #25d366;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Pop-in and pop-out animation */
+@keyframes popInOut {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+/* Hover effect */
+.whatsapp-popup #whatsapp-btn img:hover {
+    transform: scale(1.1);
+}
+
+/* For Mobile responsiveness */
+@media (max-width: 768px) {
+    .whatsapp-popup #whatsapp-btn img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+/* Section Styling */
+#event-card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px; /* Minimal padding */
+}
+
+/* Card Styling */
+.card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-image {
+    width: 100%;
+    height: auto; /* Adjusts to image aspect ratio */
+}
+
+.card-content {
+    padding: 15px; /* Reduced padding */
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #25d366;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1eb853;
+}
+
+.book-now {
+    background-color: #007bff;
+}
+
+.book-now:hover {
+    background-color: #0056b3;
+}
+
+/* WhatsApp Popup Styling */
+#whatsapp-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 2px solid #25d366;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+#whatsapp-popup p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.whatsapp-now {
+    background-color: #25d366;
+}
+
+/* Hide Popup Initially */
+.hidden {
+    display: none;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #event-card-section {
+        padding: 5px;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    #whatsapp-popup {
+        bottom: 10px;
+        right: 10px;
+    }
+}
